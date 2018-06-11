@@ -2,9 +2,9 @@ namespace functionalCSharp
 {
   class Cash : IMoney
     {
-        public string Currency { get; }
+        public Currency Currency { get; }
         public decimal Amount { get; }
-        public Cash(string currency, decimal amount)
+        public Cash(Currency currency, decimal amount)
         {
             this.Currency = currency;
             this.Amount = amount;
