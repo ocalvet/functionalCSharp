@@ -1,0 +1,4 @@
+namespace functionalCSharp
+{
+  interface IMoney  {}
+}
