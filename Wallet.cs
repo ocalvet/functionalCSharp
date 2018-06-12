@@ -4,8 +4,8 @@ namespace functionalCSharp
 {
   class Wallet
     {
-        public List<IMoney> Contents { get; }
-        public Wallet(List<IMoney> contents)
+        public IEnumerable<IMoney> Contents { get; }
+        public Wallet(IEnumerable<IMoney> contents)
         {
             this.Contents = contents;
         }

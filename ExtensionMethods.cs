@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace functionalCSharp
 {
@@ -8,6 +9,7 @@ namespace functionalCSharp
     {
       wallet
           .Contents
+          .ToList()
           .ForEach(m => Console.WriteLine(m.ToString()));
     }
     public static (Currency currency, IMoney money) Add(this IMoney money, decimal amount)
