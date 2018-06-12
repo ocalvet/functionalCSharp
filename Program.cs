@@ -10,10 +10,13 @@ namespace functionalCSharp
     {
       var dollar = new Currency("USD");
       var euro = new Currency("EUR");
-      var fiveUSDs = new Cash(dollar, 5m);
-      var fiveURDs = new Cash(euro, 5m);
-      var (_, tenUSDs) = fiveUSDs.Add(5m);
-      Wallet wallet = new Wallet(new List<IMoney>() { fiveURDs, fiveUSDs, tenUSDs });
+      IEnumerable<IMoney> moneys = new List<IMoney>()
+      {
+        new Cash(dollar, 5m),
+        new Cash(euro, 5m),
+        new Cash(euro, 5m)
+      };
+      Wallet wallet = new Wallet(moneys);
       wallet.Print();
     }
   }
