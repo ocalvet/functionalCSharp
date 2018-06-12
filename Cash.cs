@@ -14,5 +14,4 @@ namespace functionalCSharp
       return $"{this.Amount} {this.Currency}";
     }
   }
-
 }
