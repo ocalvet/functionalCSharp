@@ -10,4 +10,12 @@ namespace functionalCSharp
       this.Contents = contents;
     }
   }
+
+  static class WalletExtensionMethods 
+  {
+    public static Wallet Charge(this Wallet wallet, decimal amount, Currency currency)
+    {
+      return new Wallet(new List<IMoney>());
+    }
+  }
 }

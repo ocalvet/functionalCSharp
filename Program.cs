@@ -18,6 +18,7 @@ namespace functionalCSharp
         new BankCard(dollar, 100m, new DateTime(2020, 06, 30))
       };
       Wallet wallet = new Wallet(moneys);
+      wallet.Charge(10m, dollar);
       wallet.Print();
     }
   }
