@@ -13,7 +13,7 @@ namespace functionalCSharp
 
   static class WalletExtensionMethods 
   {
-    public static Wallet Charge(this Wallet wallet, decimal amount, Currency currency)
+    public static Wallet Charge(this Wallet wallet, Amount amount, Currency currency)
     {
       return new Wallet(new List<IMoney>());
     }

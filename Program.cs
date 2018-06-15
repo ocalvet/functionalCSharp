@@ -10,6 +10,7 @@ namespace functionalCSharp
     {
       var dollar = new Currency("USD");
       var euro = new Currency("EUR");
+      var totalToBeCharged = new Amount(dollar, 10m);
       IEnumerable<IMoney> moneys = new List<IMoney>()
       {
         new Cash(dollar, 5m),
@@ -18,7 +19,7 @@ namespace functionalCSharp
         new BankCard(dollar, 100m, new DateTime(2020, 06, 30))
       };
       Wallet wallet = new Wallet(moneys);
-      wallet.Charge(10m, dollar);
+      wallet.Charge(totalToBeCharged, dollar);
       wallet.Print();
     }
   }
