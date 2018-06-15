@@ -6,13 +6,6 @@ namespace functionalCSharp
 {
   static class ExtensionMethods
   {
-    public static void Print(this Wallet wallet)
-    {
-      wallet
-          .Contents
-          .ToList()
-          .ForEach(m => Console.WriteLine(m.ToString()));
-    }
     public static (Currency currency, IMoney money) Add(this IMoney money, decimal amount)
     {
       switch (money)

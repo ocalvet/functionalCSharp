@@ -9,18 +9,15 @@ namespace functionalCSharp
     {
       this.Contents = contents;
     }
-  }
-
-  static class WalletExtensionMethods 
-  {
-    public static Wallet Charge(this Wallet wallet, Amount amount, Currency currency)
+    
+    public override string ToString()
     {
-      var newWallet = wallet
-        .Contents
-        .Of(amount.Currency)
-        .Charge(amount);
-
-      return newWallet;
+      string str = string.Empty;
+      foreach(var money in this.Contents)
+      {
+        str += $"{money.ToString()}\n";
+      }
+      return str;
     }
   }
 }
