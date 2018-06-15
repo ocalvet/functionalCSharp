@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace functionalCSharp
@@ -21,6 +22,16 @@ namespace functionalCSharp
         default:
           return (null, null);
       }
+    }
+
+    public static IEnumerable<IMoney> Of(this IEnumerable<IMoney> moneys, Currency currency)
+    {
+        return new List<IMoney>();
+    }
+
+    public static Wallet Charge(this IEnumerable<IMoney> moneys, Amount amount)
+    {
+        return new Wallet(new List<IMoney>());
     }
   }
 }

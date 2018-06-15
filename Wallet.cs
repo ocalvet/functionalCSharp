@@ -15,7 +15,12 @@ namespace functionalCSharp
   {
     public static Wallet Charge(this Wallet wallet, Amount amount, Currency currency)
     {
-      return new Wallet(new List<IMoney>());
+      var newWallet = wallet
+        .Contents
+        .Of(amount.Currency)
+        .Charge(amount);
+
+      return newWallet;
     }
   }
 }
